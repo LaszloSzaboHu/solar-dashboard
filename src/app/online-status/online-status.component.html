@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="indicator-container" [class.online]="isOnline">
+        <div class="indicator"></div>
+        <div class="label">
+            <span *ngIf="isOnline">online</span>
+            <span *ngIf="!isOnline">offline</span>
+        </div>
+        <div class="data-age-label">
+            last update: {{lastUpdateLabel}}
+        </div>
+    </div>
+    <app-progress-circle [progress]="progress" [remainingSeconds]="remainingSeconds"></app-progress-circle>
+</div>

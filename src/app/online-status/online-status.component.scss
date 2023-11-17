@@ -1,0 +1,52 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    background-color: beige;
+    padding: 5px;
+    align-items: center;
+}
+
+.indicator-container {
+    color: red;
+    display: flex;
+    align-items: center;
+
+    .indicator {
+        height: 12px;
+        width: 12px;
+        background-color: red;
+        border-radius: 10px;
+    }
+
+    .label {
+        padding-left: 5px;
+        font-weight: bold;
+    }
+}
+
+.indicator-container.online {
+    color: green;
+
+    .indicator {
+        background-color: green;
+    }
+}
+
+.timer {
+    border: solid 1px;
+    border-radius: 20px;
+    height: 30px;
+    width: 30px;
+}
+
+app-progress-circle {
+    height: 30px;
+    width: 30px;
+}
+
+.data-age-label {
+    font-family: sans-serif;
+    font-size: 14px;
+    padding-left: 10px;
+}
+
