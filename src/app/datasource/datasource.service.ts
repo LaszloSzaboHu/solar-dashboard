@@ -9,6 +9,7 @@ import { lastValueFrom } from 'rxjs';
 export class DatasourceService {
 
     HOST = "http://localhost:8282";
+    //HOST = "./backend";
     httpOptions = {
         headers: new HttpHeaders({
             'Content-Type': 'application/json',
@@ -19,7 +20,7 @@ export class DatasourceService {
 
     getCurrent(): Promise<SensorData> {
         return lastValueFrom(
-            this.httpClient.get<SensorData>(`${this.HOST}/getCurrent.php`, this.httpOptions)
+            this.httpClient.get<SensorData>(`${this.HOST}/getCurrent.php?r=${Math.random()}`, this.httpOptions)
         );
     }
 }

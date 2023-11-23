@@ -4,18 +4,18 @@ import { RouterOutlet } from '@angular/router';
 import { DatasourceService } from './datasource/datasource.service';
 import { OnlineStatusComponent } from './online-status/online-status.component';
 import { SensorData } from './datasource/sensorData';
-import { ProgressCircleComponent } from './progress-circle/progress-circle.component';
+import { TemperatureComponent } from './temperature/temperature.component';
 
 @Component({
     selector: 'app-root',
     standalone: true,
-    imports: [CommonModule, RouterOutlet, OnlineStatusComponent],
+    imports: [CommonModule, RouterOutlet, OnlineStatusComponent, TemperatureComponent],
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
     title = 'solar-dashboard';
-    latestSensorData!: SensorData;
+    latestData!: SensorData;
     lastUpdate = 0;
     updateInterval = 15;
     remainingTimeForUpdate = this.updateInterval;
@@ -41,7 +41,7 @@ export class AppComponent {
 
     loadCurrentData() {
         this.datasourceService.getCurrent().then((sensorData: SensorData) => {
-            this.latestSensorData = sensorData;
+            this.latestData = sensorData;
             this.lastUpdate = sensorData.timestamp;
         });
     }

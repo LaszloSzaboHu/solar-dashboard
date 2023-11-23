@@ -1,1 +1,7 @@
-<app-online-status [lastUpdate]="lastUpdate" [remainingTimeForUpdate]="remainingTimeForUpdate" (click)="statusClicked()"></app-online-status>
+<app-online-status [lastUpdate]="lastUpdate" [remainingTimeForUpdate]="remainingTimeForUpdate"
+    (click)="statusClicked()"></app-online-status>
+<div class="temperatures-container">
+    <app-temperature [value]="latestData.sensor1"></app-temperature>
+    <app-temperature [value]="latestData.sensor2"></app-temperature>
+    <app-temperature [value]="latestData.sensor3"></app-temperature>
+</div>
