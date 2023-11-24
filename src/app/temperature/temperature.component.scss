@@ -2,8 +2,21 @@
     display: flex;
     font-size: 47px;
     margin: 10px;
+    padding: 10px;
+    box-shadow: 1px 1px 3px #bababa;
+    align-items: baseline;
+}
 
-    .unit {
-        padding-left: 10px;
-    }
+.value {
+    padding-left: 10px;
+}
+
+.unit {
+    padding-left: 10px;
+    font-size: 25px;
+}
+
+svg {
+    width: 40px;
+    fill: #00aeff;
 }

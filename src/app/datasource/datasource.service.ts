@@ -8,8 +8,8 @@ import { lastValueFrom } from 'rxjs';
 })
 export class DatasourceService {
 
-    HOST = "http://localhost:8282";
-    //HOST = "./backend";
+    //HOST = "http://localhost:8282";
+    HOST = "./backend";
     httpOptions = {
         headers: new HttpHeaders({
             'Content-Type': 'application/json',

@@ -5,6 +5,7 @@ import { DatasourceService } from './datasource/datasource.service';
 import { OnlineStatusComponent } from './online-status/online-status.component';
 import { SensorData } from './datasource/sensorData';
 import { TemperatureComponent } from './temperature/temperature.component';
+import { Type } from './temperature/type';
 
 @Component({
     selector: 'app-root',
@@ -19,6 +20,7 @@ export class AppComponent {
     lastUpdate = 0;
     updateInterval = 15;
     remainingTimeForUpdate = this.updateInterval;
+    Type = Type;
 
     constructor(private readonly datasourceService: DatasourceService) {
         this.loadCurrentData();

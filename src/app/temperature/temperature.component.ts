@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Type } from './type';
 
 @Component({
   selector: 'app-temperature',
@@ -11,5 +12,8 @@ import { CommonModule } from '@angular/common';
 export class TemperatureComponent {
 
     @Input() value!: number;
+    @Input() type!: Type;
+    @Input() unit!: string;
+    Type = Type;
 
 }
